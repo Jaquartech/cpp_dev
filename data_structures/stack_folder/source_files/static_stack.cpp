@@ -9,7 +9,7 @@ stack_static_mem_int_type::stack_static_mem_int_type() : top(-1){
     
 }
 
-void stack_static_mem_int_type::display_content(){
+void stack_static_mem_int_type::display() const{
 
     for (int i = 0; i < CONTAINER_SIZE; i++)
     {

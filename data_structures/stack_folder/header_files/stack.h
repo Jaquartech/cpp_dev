@@ -28,6 +28,9 @@ class stack_static_mem_int_type
     public:
     stack_static_mem_int_type();
     void _push(const int & value) const;
-    void display_content();
+    bool _is_empty() const;
+    bool _is_empty() const;
+    int _size() const;
+    void display_content() const;
 };
 #endif //STACK_H
