@@ -18,14 +18,16 @@ class PLusOPerator
 // #################################################################
 
 #define CONTAINER_SIZE 5
+
 class stack_static_mem_int_type
 {
     private:
+    int top;
     int array_container[CONTAINER_SIZE];
 
     public:
     stack_static_mem_int_type();
     void _push(const int & value) const;
-    void display_content() const;
+    void display_content();
 };
 #endif //STACK_H
