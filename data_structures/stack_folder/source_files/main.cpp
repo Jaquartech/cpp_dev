@@ -2,10 +2,9 @@
 
 int main()
 {
-    /*PLusOPerator obj1(1200);
-    PLusOPerator obj2(300);
-    PLusOPerator obj3 = obj1 + obj2;
-    obj3.printX();*/
-
+    stack_static_mem_int_type obj;
+    
+    obj.display_content();
+    std::cout << std::endl;
     return (0);
 }
