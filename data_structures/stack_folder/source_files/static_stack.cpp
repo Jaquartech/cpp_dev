@@ -54,3 +54,10 @@ int stack_static_mem_int_type::peek() const{
     
    return array_container[top];
 }
+
+void stack_static_mem_int_type::pop(){
+    if (is_empty())
+        throw "Exception: Stack Underflow\n";
+    
+   std:: << "top: " << array_container[--top] << std::endl;
+}
