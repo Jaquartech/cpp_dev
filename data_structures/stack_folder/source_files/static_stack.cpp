@@ -28,3 +28,7 @@ bool stack_static_mem_int_type::is_full() const{
  int stack_static_mem_int_type::size() const{
     if(!is_empty()) return (top + 1);
  }
+
+int stack_static_mem_int_type::capacity() const{
+    return CONTAINER_SIZE;
+}
