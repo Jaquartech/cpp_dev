@@ -27,7 +27,9 @@ class stack_static_mem_int_type
 
     public:
     stack_static_mem_int_type();
-    void push(const int & value) const;
+    void push(const int & value);
+    void pop() const;
+    void peek() const;
     bool is_empty() const;
     bool is_full() const;
     int size() const;

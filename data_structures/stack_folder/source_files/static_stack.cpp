@@ -32,3 +32,18 @@ bool stack_static_mem_int_type::is_full() const{
 int stack_static_mem_int_type::capacity() const{
     return CONTAINER_SIZE;
 }
+
+void stack_static_mem_int_type::push(const int & value) const{
+    if (is_empty())
+    {
+        std::cout << "Stack Underflow\n";
+        return;
+    }
+    if (is_full())
+    {
+         std::cout << "Stack Overflow\n";
+        return;
+    }
+    
+    array_container[++top] = value;
+}
