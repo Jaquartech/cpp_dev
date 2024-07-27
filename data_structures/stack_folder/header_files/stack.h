@@ -21,16 +21,19 @@ class PLusOPerator
 
 class stack_static_mem_int_type
 {
-    private:
+    public:
     int top;
     int array_container[CONTAINER_SIZE];
 
     public:
     stack_static_mem_int_type();
-    void push(const int & value) const;
-    bool is_full() const;
+    void push(const int & value);
+    void pop();
+    int peek() const;
     bool is_empty() const;
+    bool is_full() const;
     int size() const;
+    int capacity() const;
     void display() const;
 };
 #endif //STACK_H
