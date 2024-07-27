@@ -17,3 +17,15 @@ void stack_static_mem_int_type::display() const{
     }
     
 }
+
+bool stack_static_mem_int_type::is_empty() const{
+    return top == -1;
+}
+
+bool stack_static_mem_int_type::is_full() const{
+    return top == CONTAINER_SIZE - 1;
+}
+
+ int stack_static_mem_int_type::size() const{
+    if(!is_empty()) return (top + 1);
+ }
