@@ -14,8 +14,7 @@ void stack_static_mem_int_type::display() const{
     for (int i = 0; i < CONTAINER_SIZE; i++)
     {
         std::cout << array_container[i] << " ";
-    }
-    
+    }   
 }
 
 bool stack_static_mem_int_type::is_empty() const{
@@ -25,3 +24,7 @@ bool stack_static_mem_int_type::is_empty() const{
 bool stack_static_mem_int_type::is_full() const{
     return top == CONTAINER_SIZE - 1;
 }
+
+ int stack_static_mem_int_type::size() const{
+    if(!is_empty()) return (top + 1);
+ }
