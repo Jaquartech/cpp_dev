@@ -21,7 +21,7 @@ class PLusOPerator
 
 class stack_static_mem_int_type
 {
-    private:
+    public:
     int top;
     int array_container[CONTAINER_SIZE];
 
