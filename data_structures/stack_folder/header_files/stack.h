@@ -29,7 +29,7 @@ class stack_static_mem_int_type
     stack_static_mem_int_type();
     void push(const int & value);
     void pop() const;
-    void peek() const;
+    int peek() const;
     bool is_empty() const;
     bool is_full() const;
     int size() const;

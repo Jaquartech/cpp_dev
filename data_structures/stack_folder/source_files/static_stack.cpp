@@ -33,7 +33,7 @@ int stack_static_mem_int_type::capacity() const{
     return CONTAINER_SIZE;
 }
 
-void stack_static_mem_int_type::push(const int & value) const{
+void stack_static_mem_int_type::push(const int & value){
     if (is_empty())
     {
         std::cout << "Stack Underflow\n";
@@ -46,4 +46,11 @@ void stack_static_mem_int_type::push(const int & value) const{
     }
     
     array_container[++top] = value;
+}
+
+int stack_static_mem_int_type::peek() const{
+    if (is_empty())
+        throw "Exception: Stack Underflow\n";
+    
+   return array_container[top];
 }
