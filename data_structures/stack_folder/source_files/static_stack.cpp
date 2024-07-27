@@ -17,3 +17,7 @@ void stack_static_mem_int_type::display() const{
     }
     
 }
+
+bool stack_static_mem_int_type::is_empty() const{
+    return top == -1;
+}
