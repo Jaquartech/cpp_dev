@@ -4,12 +4,13 @@ int main()
 {
     stack_static_mem_int_type obj;
     int option;
-
     int entry;
+
+    std::cout << "Welcome\n";
     while (true)
     {
-        std::cout << "Enter 1: push()\n Enter 2: pop()\n Enter 3: peek()\n Enter\
-Enter 4: is_empty()\n Enter 5: is_full()\n Enter 6: capacity()\n Enter 7: display()\n";
+        std::cout << "Enter 1: push()\nEnter 2: pop()\nEnter 3: peek()\nEnter\
+Enter 4: is_empty()\nEnter 5: is_full()\nEnter 6: capacity()\nEnter 7: display()\n";
         std::cout << "enter Option: ";
         std::cin >> option;
         
@@ -43,18 +44,18 @@ Enter 4: is_empty()\n Enter 5: is_full()\n Enter 6: capacity()\n Enter 7: displa
             break;
         case 4 :
         if (!obj.is_empty())
-            std::cout <<"Stack is having elements" << std::endl << std::endl;
+            std::cout <<"is_empty(): Stack is having elements" << std::endl << std::endl;
         else
-            std::cout <<"Stack is empty" << std::endl << std::endl;
+            std::cout <<"is_empty(): Stack is empty" << std::endl << std::endl;
         
             break;
         case 5 :
            if (obj.is_full())
-            std::cout <<"Stack is full" << std::endl << std::endl;
+            std::cout <<"is_full():  Stack is full" << std::endl << std::endl;
         else if (obj.is_empty())
-            std::cout <<"Stack is Underflow" << std::endl << std::endl;
+            std::cout <<"is_full():  Stack is Underflow" << std::endl << std::endl;
         else
-            std::cout <<"Stack conatins element within range" << std::endl << std::endl;
+            std::cout <<"is_full(): Stack conatins element within range" << std::endl << std::endl;
             break;
         case 6 :
            std::cout << "capacity: " << obj.capacity() << std::endl << std::endl;
@@ -74,7 +75,7 @@ Enter 4: is_empty()\n Enter 5: is_full()\n Enter 6: capacity()\n Enter 7: displa
                 std::cout << "Error: Invalid Option or function arguement arguement" << std::endl;
                 //continue;
                }
-        
+        std::cout << std::endl;
     }
    
 }
