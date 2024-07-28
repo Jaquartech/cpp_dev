@@ -2,3 +2,31 @@
 ../main
 main.exe
 main.cpp
+
+/*CC = g++
+CFLAGS = -c
+
+# Directories
+INCLUDE_DIR = data_structures/stack_folder/header_files
+SRC_DIR = data_structures/stack_folder/source_files
+
+# Output files
+OBJ_DIR = $(SRC_DIR)
+EXECUTABLE = executable
+
+# Source and object files
+SOURCES = $(SRC_DIR)/main.cpp $(SRC_DIR)/static_stack.cpp
+OBJECTS = $(OBJ_DIR)/main.o $(OBJ_DIR)/static_stack.o
+
+# Targets and rules
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(EXECUTABLE)
+
+$(OBJ_DIR)/main.o: $(SRC_DIR)/main.cpp $(INCLUDE_DIR)/stack.h
+	$(CC) $(CFLAGS) $(SRC_DIR)/main.cpp -o $(OBJ_DIR)/main.o
+
+$(OBJ_DIR)/static_stack.o: $(SRC_DIR)/static_stack.cpp $(INCLUDE_DIR)/stack.h
+	$(CC) $(CFLAGS) $(SRC_DIR)/static_stack.cpp -o $(OBJ_DIR)/static_stack.o
+
+clean:
+	rm -f $(OBJECTS) $(EXECUTABLE)
