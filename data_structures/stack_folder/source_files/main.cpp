@@ -5,19 +5,20 @@ int main()
     stack_static_mem_int_type obj;
     int option;
     int entry;
+    printf("CONST_NUM: %d\n", CONST_NUM);
 
-    std::cout << "Welcome\n";
+    std::cout << "Hi Welcome\n";
     while (true)
     {
         std::cout << "Enter 1: push()\nEnter 2: pop()\nEnter 3: peek()\nEnter\
 Enter 4: is_empty()\nEnter 5: is_full()\nEnter 6: capacity()\nEnter 7: display()\n";
-        std::cout << "enter Option: ";
+        std::cout << "Enter Option: ";
         std::cin >> option;
         
         switch (option)
         {
         case 1 :
-            std::cout << "enter value: ";
+            std::cout << "Enter value: ";
             std::cin >> entry;
             obj.push(entry);
             break;
@@ -43,27 +44,26 @@ Enter 4: is_empty()\nEnter 5: is_full()\nEnter 6: capacity()\nEnter 7: display()
             }
             break;
         case 4 :
-        if (!obj.is_empty())
-            std::cout <<"is_empty(): Stack is having elements" << std::endl << std::endl;
-        else
-            std::cout <<"is_empty(): Stack is empty" << std::endl << std::endl;
-        
+            if (!obj.is_empty())
+                std::cout <<"is_empty(): Stack is having elements" << std::endl << std::endl;
+            else
+                std::cout <<"is_empty(): Stack is empty" << std::endl << std::endl;
             break;
-        case 5 :
-           if (obj.is_full())
-            std::cout <<"is_full():  Stack is full" << std::endl << std::endl;
-        else if (obj.is_empty())
-            std::cout <<"is_full():  Stack is Underflow" << std::endl << std::endl;
-        else
-            std::cout <<"is_full(): Stack conatins element within range" << std::endl << std::endl;
+            case 5 :
+            if (obj.is_full())
+                std::cout <<"is_full():  Stack is full" << std::endl << std::endl;
+            else if (obj.is_empty())
+                std::cout <<"is_full():  Stack is Underflow" << std::endl << std::endl;
+            else
+                std::cout <<"is_full(): Stack conatins element within range" << std::endl << std::endl;
             break;
-        case 6 :
-           std::cout << "capacity: " << obj.capacity() << std::endl << std::endl;
-            break;
-        case 7 :
-            std::cout << "display caalled\n";
-            obj.display();
-            break;
+            case 6 :
+            std::cout << "capacity: " << obj.capacity() << std::endl << std::endl;
+                break;
+            case 7 :
+                std::cout << "display caalled\n";
+                obj.display();
+                break;
         default:
             //std::cout << "You have entered invalid Option\n";
             break;

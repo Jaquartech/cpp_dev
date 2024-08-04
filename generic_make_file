@@ -1,0 +1,32 @@
+INCLUDE_DIR = -I./data_structures/stack/header_files
+CC = g++
+OPT = -O0
+ENABLE_WARNING = -Wall -Wextra 
+DEPFLAGS = -MP -MD
+CFLAGS = $(ENABLE_WARNING) -c -g $(DEPFLAGS) $(INCLUDE_DIR) $(OPT)
+
+BINARY = bin
+
+all: $(BINARY)
+
+SRC_DIR = data_structures/stack_folder/source_files
+
+SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
+OBJECTS = $(patsubst %.cpp, %.o, $(SOURCES))
+DEPFILES = $(patsubst %.cpp, %.d, $(SOURCES))
+
+
+$(BINARY): $(OBJECTS)
+	$(CC) $^ -o $@
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm -rf $(SOURCES) $(OBJECTS)
+
+getSource:
+	@echo $(SOURCES)
+
+-include $(DEPFLAGS)
+

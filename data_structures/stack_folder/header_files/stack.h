@@ -36,4 +36,6 @@ class stack_static_mem_int_type
     int capacity() const;
     void display() const;
 };
+
+#define CONST_NUM 50
 #endif //STACK_H
