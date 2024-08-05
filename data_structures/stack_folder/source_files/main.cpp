@@ -2,7 +2,7 @@
 #include <limits>
 int main()
 {
-    stack_static_mem_int_type obj;
+    dynamic_static_mem_int_type obj(5);
     int option;
     int entry;
     printf("CONST_NUM: %d\n", CONST_NUM);
@@ -12,7 +12,7 @@ int main()
     {
         std::cout << "Enter 1: push()\nEnter 2: pop()\nEnter 3: peek()\nEnter\
 Enter 4: is_empty()\nEnter 5: is_full()\nEnter 6: capacity()\nEnter 7: display()\n";
-        std::cout << "Enter Option: ";
+        std::cout << "Please Enter Option: ";
         std::cin >> option;
         
         switch (option)
@@ -20,7 +20,14 @@ Enter 4: is_empty()\nEnter 5: is_full()\nEnter 6: capacity()\nEnter 7: display()
         case 1 :
             std::cout << "Enter value: ";
             std::cin >> entry;
-            obj.push(entry);
+            try
+            {
+                obj.push(entry);
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << e.what() << '\n';
+            }
             break;
         case 2 :
             try
@@ -55,18 +62,22 @@ Enter 4: is_empty()\nEnter 5: is_full()\nEnter 6: capacity()\nEnter 7: display()
             else if (obj.is_empty())
                 std::cout <<"is_full():  Stack is Underflow" << std::endl << std::endl;
             else
-                std::cout <<"is_full(): Stack conatins element within range" << std::endl << std::endl;
+                std::cout <<"is_full(): Stack conatins element in range" << std::endl << std::endl;
             break;
             case 6 :
             std::cout << "capacity: " << obj.capacity() << std::endl << std::endl;
                 break;
             case 7 :
-                std::cout << "display caalled\n";
+                // std::cout << "display called\n";
+                // std::cout << "size: " << obj.size() << std::endl;
                 obj.display();
                 break;
-        default:
+             case 8 :
+                obj.clr_screen();
+                break;
+            default:
             //std::cout << "You have entered invalid Option\n";
-            break;
+                break;
         }
         if (std::cin.fail())
                 {

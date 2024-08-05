@@ -37,5 +37,29 @@ class stack_static_mem_int_type
     void display() const;
 };
 
-#define CONST_NUM 50
+// #############################################################
+class dynamic_static_mem_int_type
+{
+    private:
+    int *dy_mem;
+    int *top;
+    unsigned int count;
+    unsigned int capacity_;
+
+    public:
+    dynamic_static_mem_int_type(int capacity);
+    ~dynamic_static_mem_int_type();
+    void push(const int & value);
+    void pop();
+    int peek() const;
+    bool is_empty() const;
+    bool is_full() const;
+    int size() const;
+    int capacity() const;
+    void display() const;
+    void clr_screen();
+};
+
+
+#define CONST_NUM 5
 #endif //STACK_H

@@ -27,7 +27,7 @@ bool stack_static_mem_int_type::is_full() const{
 }
 
  int stack_static_mem_int_type::size() const{
-    if(is_empty()) throw "EXCeption: stack";
+    if(is_empty()) throw "Exception: stack";
 
     return (top + 1);
  }

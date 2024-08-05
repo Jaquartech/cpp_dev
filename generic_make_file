@@ -1,4 +1,4 @@
-INCLUDE_DIR = -I./data_structures/stack/header_files
+INCLUDE_DIR = -IC:/Users/Admin/OneDrive/Desktop/cpp_dev/data_structures/stack_folder/header_files
 CC = g++
 OPT = -O0
 ENABLE_WARNING = -Wall -Wextra 
